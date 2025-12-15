@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/carbon/core/emission")
+@RequestMapping("/carbon/core/emission")
 public class EmissionController {
 
     private final EmissionService emissionService;

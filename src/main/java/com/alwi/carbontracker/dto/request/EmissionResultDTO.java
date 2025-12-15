@@ -1,5 +1,6 @@
 package com.alwi.carbontracker.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
@@ -8,10 +9,16 @@ import java.time.LocalDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EmissionResultDTO implements Serializable {
+
     private String carbonActivityId;
+
     private BigDecimal emissionKg;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime calculatedAt;
+
     private String calculationStatus;
+
     private String calculationType;
 
     public EmissionResultDTO(String carbonActivityId, BigDecimal emissionKg, LocalDateTime calculatedAt, String calculationStatus, String calculationType) {
@@ -20,6 +27,10 @@ public class EmissionResultDTO implements Serializable {
         this.calculatedAt = calculatedAt;
         this.calculationStatus = calculationStatus;
         this.calculationType = calculationType;
+    }
+
+    public EmissionResultDTO() {
+
     }
 
     public String getCarbonActivityId() {

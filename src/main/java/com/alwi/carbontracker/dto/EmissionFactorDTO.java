@@ -7,9 +7,13 @@ import java.math.BigDecimal;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class EmissionFactorDTO implements Serializable {
+
     private String activityType;
+
     private String unit;
+
     private BigDecimal factorKg;
+
     private String effectiveFrom;
 
     public EmissionFactorDTO() {

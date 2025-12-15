@@ -19,6 +19,7 @@ public class CommonConstant {
         public static final String FAILED_SAVE_EMISSION_RESULT = "FAILED_SAVE_EMISSION_RESULT";
         public static final String FAILED_GET_EMISSION_INFO = "FAILED_GET_EMISSION_INFO";
         public static final String FAILED_GET_DAILY_SUMMARY = "FAILED_GET_DAILY_SUMMARY";
+        public static final String FAILED_GET_ALL_SUMMARY = "FAILED_GET_ALL_SUMMARY";
         public static final String ACTIVITY_TYPE_IS_NOT_FOUND = "ACTIVITY_TYPE_IS_NOT_FOUND";
         public static final String ACTIVITY_IS_NOT_FOUND = "ACTIVITY_IS_NOT_FOUND";
         public static final String FAILED_TO_GET_ALL_EMISSION_FACTOR = "FAILED_TO_GET_ALL_EMISSION_FACTOR";

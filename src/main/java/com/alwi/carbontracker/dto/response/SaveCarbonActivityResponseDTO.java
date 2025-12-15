@@ -1,5 +1,6 @@
 package com.alwi.carbontracker.dto.response;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.Serializable;
@@ -8,8 +9,12 @@ import java.time.LocalDateTime;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SaveCarbonActivityResponseDTO implements Serializable {
+
     private String activityType;
+
     private BigDecimal amount;
+
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime activityTime;
 
     public SaveCarbonActivityResponseDTO(String activityType, BigDecimal amount, LocalDateTime activityTime) {

@@ -1,6 +1,6 @@
 package com.alwi.carbontracker.repository;
 
-import com.alwi.carbontracker.dto.response.DailyEmissionSummaryDTO;
+import com.alwi.carbontracker.dto.projection.DailyEmissionSummaryProjection;
 import com.alwi.carbontracker.model.CarbonEmissionResult;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -22,14 +22,14 @@ public interface CarbonEmissionResultRepository extends JpaRepository<CarbonEmis
                 COUNT(*)                       AS totalEvent,
                 SUM(CASE WHEN cer.calculation_status = 'SUCCESS' THEN 1 ELSE 0 END) AS successCount,
                 SUM(CASE WHEN cer.calculation_status = 'FAILED' THEN 1 ELSE 0 END)  AS failedCount
-            FROM carbon_emission_result cer
-            JOIN carbon_activity ca 
+            FROM carbon_tracker.carbon_emission_result cer
+            JOIN carbon_tracker.carbon_activity ca 
                 ON cer.carbon_activity_id = ca.id
             WHERE DATE(cer.calculated_at) = :date
             GROUP BY ca.activity_type
             """,
             nativeQuery = true)
-    List<DailyEmissionSummaryDTO> getDailySummary(
+    List<DailyEmissionSummaryProjection> getDailySummary(
             @Param("date") LocalDate date
     );
 
