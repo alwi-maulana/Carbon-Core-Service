@@ -27,15 +27,7 @@ public class ThirdPartyService {
         try {
             LOGGER.info("Send Event Calculate URL: {}", emissionCalculationUrl);
 
-            System.out.println("request body " + requestBody.toString());
-
-            ResponseEntity<EmissionResultDTO> response = restTemplate.postForEntity(
-                    emissionCalculationUrl,
-                    requestBody,
-                    EmissionResultDTO.class
-            );
-
-            System.out.println("response: " + response);
+            ResponseEntity<EmissionResultDTO> response = restTemplate.postForEntity(emissionCalculationUrl, requestBody, EmissionResultDTO.class);
 
             if (response.getStatusCode().is2xxSuccessful()) {
                 return response.getBody();

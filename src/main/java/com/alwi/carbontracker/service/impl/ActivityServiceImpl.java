@@ -164,10 +164,8 @@ public class ActivityServiceImpl implements ActivityService {
                     ? requestBody.getActivityTo().atTime(23, 59, 59)
                     : LocalDateTime.now();
 
-
             List<ActivityWithResultProjection> projections = carbonActivityRepository.findActivitiesWithResult(from, to, requestBody.getActivityType(), requestBody.getStatus().toUpperCase());
 
-            System.out.println("projections " + projections.toString());
             return projections.stream()
                     .map(p -> {
                         CarbonActivityResultDTO dto = new CarbonActivityResultDTO();
