@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "998ce77a-79cd-4d0f-9a63-d3316849b95f",
+		"name": "CARBON TRACKER (Carbon Activity Service)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24418311",
+		"_collection_link": "https://lively-astronaut-690406.postman.co/workspace/Carbon-Tracker~609d78d3-a07b-457f-b025-3d9a4ff02058/collection/24418311-998ce77a-79cd-4d0f-9a63-d3316849b95f?action=share&source=collection_link&creator=24418311"
+	},
+	"item": [
+		{
+			"name": "SAVE ACTIVITY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"activityType\": \"USING_FAN\",\n  \"amount\": 70.5,\n  \"timestamp\": \"2025-12-17 19:00:00\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/input",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"input"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "SAVE ACTIVITY DRIVING CAR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"activityType\": \"DRIVING_CAR\",\n  \"amount\": 200.5,\n  \"timestamp\": \"2025-12-01 19:00:00\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carbon/core/input",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carbon",
+								"core",
+								"input"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "SAVE ACTIVITY DRIVING MOTOR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"activityType\": \"DRIVING_MOTOR\",\n  \"amount\": 60.5,\n  \"timestamp\": \"2025-12-03 19:00:00\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carbon/core/input",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carbon",
+								"core",
+								"input"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "GET EMISSION BY ACTIVITY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"activityType\": \"DRIVING_CAR\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/emission/getByActivity",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"emission",
+						"getByActivity"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GET EMISSION CHARGING_LAPTOP",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"activityType\": \"CHARGING_LAPTOP\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carbon/core/emission/getByActivity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carbon",
+								"core",
+								"emission",
+								"getByActivity"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "GET EMISSION COOKING_RICE",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"activityType\": \"COOKING_RICE\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carbon/core/emission/getByActivity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carbon",
+								"core",
+								"emission",
+								"getByActivity"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "GET EMISSION COOKING_RICE Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"activityType\": \"USING_AIR_CONDITIONER\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carbon/core/emission/getByActivity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carbon",
+								"core",
+								"emission",
+								"getByActivity"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "GET EMISSION USING_FAN",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"activityType\": \"USING_FAN\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/carbon/core/emission/getByActivity",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"carbon",
+								"core",
+								"emission",
+								"getByActivity"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "ACTIVITY LIST",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"activityType\": \"DRIVING_CAR\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/emission/activity-list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"emission",
+						"activity-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVE EMISSION RESULT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carbonActivityId\": \"e334fa47-0ef0-4ecf-b082-cd8613a7a192\",\n    \"emissionKg\": 2.98065,\n    \"calculatedAt\": \"2025-12-15 00:13:45\",\n    \"calculationStatus\": \"SUCCESS\",\n    \"calculationType\": \"EVENT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/emission/save-result",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"emission",
+						"save-result"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SUMMARY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"date\":\"2025-12-15\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/summary",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"summary"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALL ACTIVITIES",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"activityFrom\": \"2025-12-01\",\n  \"activityTo\": \"2025-12-15\",\n  \"activityType\": \"DRIVING_CAR\",\n  \"status\": \"SUCCESS\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/all-activities",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"all-activities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL EMISSION",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"carbonActivityId\": \"e334fa47-0ef0-4ecf-b082-cd8613a7a192\",\n    \"emissionKg\": 2.98065,\n    \"calculatedAt\": \"2025-12-15T00:13:45.450347\",\n    \"calculationStatus\": \"SUCCESS\",\n    \"calculationType\": \"EVENT\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/carbon/core/emission/get-all",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"carbon",
+						"core",
+						"emission",
+						"get-all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
