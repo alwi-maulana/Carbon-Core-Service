@@ -49,6 +49,4 @@ public interface CarbonActivityRepository extends JpaRepository<CarbonActivity, 
             @Param("activityType") String activityType,
             @Param("status") String status
     );
-
-
 }

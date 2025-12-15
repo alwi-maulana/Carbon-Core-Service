@@ -15,8 +15,4 @@ public interface EmissionFactorRepository extends JpaRepository<EmissionFactor, 
 
     @Query("SELECT e.activityType FROM EmissionFactor e")
     List<String> findAllActivityTypes();
-
-    @Query("SELECT e.activityType, e.unit, e.factorKg, e.effectiveFrom FROM EmissionFactor e")
-    List<Object[]> findAllWithoutIdRaw();
-
 }
