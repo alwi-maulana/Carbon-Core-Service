@@ -36,6 +36,10 @@ This service acts as the core domain service and data provider in the carbon tra
 
 **Implementation:** Spring IoC, Java Stream, Native SQL Query, Microservice
 
+##API Collections are store on this file
+You can import it to your local postman
+"CARBON TRACKER (Carbon Activity Service).postman_collection.json"
+
 
 ## Deployment on localhost:8080
 
