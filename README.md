@@ -40,6 +40,13 @@ This service acts as the core domain service and data provider in the carbon tra
 You can import it to your local postman
 "CARBON TRACKER (Carbon Activity Service).postman_collection.json"
 
+## Database Schema and Data Sample
+The schema and data query are store here, you can import it to your local environment
+
+```bash
+ src/main/resources 
+```
+
 
 ## Deployment on localhost:8080
 
